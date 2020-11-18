@@ -1,0 +1,9 @@
+<beans>
+    <bean id="rateLimiter" class="model.chuangjian.factory.diSimple.RateLimiter">
+        <constructor-arg ref="redisCounter"/>
+    </bean>
+    <bean id="redisCounter" class="model.chuangjian.factory.diSimple.RedisCounter">
+        <constructor-arg type="String" value="127.0.0.1"/>
+        <constructor-arg type="String" value="1234" />
+    </bean>
+</beans>
